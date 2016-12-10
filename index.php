@@ -4,17 +4,17 @@
 
 	date_default_timezone_set('America/Los_Angeles');
 
-	$url = 'https://leanpub.com/buildingsecurenodeapps/packages/book/purchases/new';
-	$price = '9.99';
+	$url = 'https://leanpub.com/securingnodeapps/packages/book/purchases/new';
+	$price = '12.99';
 
 	//determine URL
 	if (isset($_GET['coupon']) && !empty($_GET['coupon']))
 	{
 
-		$url = 'https://leanpub.com/buildingsecurenodeapps/packages/book/purchases/c/' . htmlentities($_GET['coupon']);
+		$url = 'https://leanpub.com/securingnodeapps/packages/book/purchases/c/' . htmlentities($_GET['coupon']);
 
 		//get price data for this coupon
-		$ch = curl_init('https://leanpub.com/buildingsecurenodeapps/coupons.json?api_key=' . $leanpubApiKey);
+		$ch = curl_init('https://leanpub.com/securingnodeapps/coupons.json?api_key=' . $leanpubApiKey);
 
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
 		curl_setopt($ch, CURLOPT_FOLLOWLOCATION, TRUE);
@@ -69,8 +69,8 @@
 
 	<meta charset="utf-8">
 
-	<title>Building Secure Node Apps Ebook</title>
-	<meta name="description" content="Building Secure Node Apps Eboo">
+	<title>Securing Node JS Apps Ebook</title>
+	<meta name="description" content="Securing Node JS Apps Ebook">
 	<meta name="author" content="Ben Edmunds">
 
 	<!-- Mobile Metas -->
@@ -110,7 +110,7 @@
 			<div class="sixteen columns">
 
 				<div class="logo">
-					<a href="/">Building Secure Node Apps</a>
+					<a href="/">Securing Node JS Apps</a>
 				</div>
 
 
@@ -172,7 +172,7 @@
 
 			<!-- Image -->
 			<div class="eight columns">
-				<img src="images/ebook-home.png" alt="Building Secure Node Apps Ebook" style="width:82%; border:2px #666666 solid;" id="ebook-home">
+				<img src="images/ebook-home.png" alt="Securing Node JS Apps Ebook" style="width:82%; border:2px #666666 solid;" id="ebook-home">
 			</div><!-- /.eight columns -->
 
 		</div> <!-- /.container -->
@@ -303,7 +303,7 @@
 	<section id="overview" class="overview boxed">
 
 		<div class="section-header">
-			<h3 class="title"><span class="title-highlight">Overview</span> of Building Secure Node Apps</h3>
+			<h3 class="title"><span class="title-highlight">Overview</span> of Securing Node JS Apps</h3>
 
 			<p class="description">
 				This will be a quick read, the finished product will be just over 100 pages.  This is a handbook style guide to specific items you can act on.  The following sections will be covered:
@@ -371,7 +371,7 @@
  			</div>
 
 			<div id="sample" class="sixteen columns product-sample" style="display:none;">
-				<a href="http://samples.leanpub.com/buildingsecurenodeapps-sample.pdf" class="button dl-link" onClick="_gaq.push(['_trackEvent', 'Landing_Click', 'Download_Sample', 'Clicked Download Sample']);">Download Sample</a>
+				<a href="http://samples.leanpub.com/securingnodeapps-sample.pdf" class="button dl-link" onClick="_gaq.push(['_trackEvent', 'Landing_Click', 'Download_Sample', 'Clicked Download Sample']);">Download Sample</a>
 
 				<img src="images/product-sample.png" alt="Sample">
 			</div> <!-- /.product-sample -->
@@ -582,7 +582,7 @@
 			<h3 class="title"><span class="title-highlight">Discuss</span></h3>
 
 			<p class="description">
-				It would be great to hear your feedback.  <a href="https://leanpub.com/buildingsecurenodeapps/feedback" target="_blank" onClick="_gaq.push(['_trackEvent', 'Landing_Click', 'Discuss', 'Clicked Join Coversation to proceed to Leanpub discussion']);">Join the discussion</a>.
+				It would be great to hear your feedback.  <a href="https://leanpub.com/securingnodeapps/feedback" target="_blank" onClick="_gaq.push(['_trackEvent', 'Landing_Click', 'Discuss', 'Clicked Join Coversation to proceed to Leanpub discussion']);">Join the discussion</a>.
 			</p>
 		</div> <!-- /.section-header -->
 
