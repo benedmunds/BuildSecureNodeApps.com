@@ -5,7 +5,7 @@
 	date_default_timezone_set('America/Los_Angeles');
 
 	$url = 'https://leanpub.com/securingnodeapps/packages/book/purchases/new';
-	$price = '12.99';
+	$price = '14.99';
 
 	//determine URL
 	if (isset($_GET['coupon']) && !empty($_GET['coupon']))
@@ -161,7 +161,7 @@
 					<a href="<?=$url?>" class="button purchase-button" onClick="_gaq.push(['_trackEvent', 'Landing_Click', 'CTA_Purchase', 'Clicked Purchase to proceed to Leanpub Checkout']);">Buy Now</a>
 
 					<p>Get It Now For Just $<?=$price?>
-					<?if ($price == 9.99):?>
+					<?if ($price === 9.99):?>
 					<br />(minimum)
 					<?endif?></p>
 					<p>45 Day Money Back Guarantee</p>
@@ -388,7 +388,7 @@
 
 			<div id="cta-container">
 				<span class="cta-txt">Get It Now For Just $<?=$price?></span>
-				<?if ($price == 9.99):?>
+				<?if ($price === 9.99):?>
 				<br />(minimum)
 				<?endif?>
 				<br /><br />
@@ -553,7 +553,7 @@
 
 					<div class="price">
 						<p><span>$</span><?=$price?></p>
-						<?if ($price == 9.99):?>
+						<?if ($price === 9.99):?>
 						(minimum)
 						<?endif?>
 					</div>
